@@ -30,7 +30,7 @@ router.post('/', function(req, res, next){
 	});
 });
 
-/* PUT /vehicles/:id */
+/* PUT /vehicles/:id - */
 router.put('/:id', function(req, res, next){
 	Vehicle.findByIdAndUpdate(req.params.id, req.body, function(err, post){
 		if(err) return next(err);
