@@ -1,0 +1,70 @@
+<html>
+
+	<head>
+
+		<title>API Test</title>
+		
+		<script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+
+	</head>
+
+	<body>
+		<script>
+
+			function testAPI(){
+				var obj = {
+					"name": "Vehicle from test file: " + Math.random(),
+					completed: false,
+					"note": "I was created from a click!"
+				};
+
+				var request = $.ajax({
+					method: "POST",
+					url: "http://localhost:3000/vehicles/",
+					data: obj
+				})
+				request.done(function( msg ) {
+				    console.log(msg);
+
+				    $('body').append('<div><h3>' + msg.name + '</h3><p>' + msg._id + '</p></div>')
+
+					var countReq = $.ajax({
+						method: "GET",
+						url: "http://localhost:3000/vehicles/"
+					})
+					countReq.done(function( msg ) {
+					    
+					    $('#count').html(msg.length);
+
+					});
+
+				});
+				 
+				request.fail(function( jqXHR, textStatus ) {
+				    alert( "Request failed: " + textStatus );
+				});
+			}
+
+			$(document).ready(function(){
+				$('#button').on('click', function(){
+					testAPI();
+				});
+
+				var countReq = $.ajax({
+					method: "GET",
+					url: "http://localhost:3000/vehicles/"
+				})
+				countReq.done(function( msg ) {
+				    
+				    $('#count').html(msg.length);
+
+				});
+			});
+
+		</script>
+
+		<button id="button">ADD A VEHICLE!</button>
+
+		<h1 id="count"></h1>
+	</body>
+</html>
