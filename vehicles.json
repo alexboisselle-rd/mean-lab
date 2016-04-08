@@ -145,3 +145,6 @@
 {"__v":0,"_id":{"$oid":"5704067fb9790f10c69fb030"},"name":"test0.0475756514351815","updated_at":{"$date":"2016-04-05T18:39:59.063Z"}}
 {"__v":0,"_id":{"$oid":"57040681b9790f10c69fb031"},"name":"test0.32441403809934855","updated_at":{"$date":"2016-04-05T18:40:01.069Z"}}
 {"__v":0,"_id":{"$oid":"5704077c172b1a26c6f1433e"},"completed":false,"name":"Vehicle from test file: 0.9764200443242923","note":"I was created from a click!","updated_at":{"$date":"2016-04-05T18:44:12.623Z"}}
+{"__v":0,"_id":{"$oid":"57041409620c1ec7c7fb03b8"},"completed":false,"name":"Vehicle from test file: 0.7307465715969459","note":"I was created from a click!","updated_at":{"$date":"2016-04-05T19:37:45.124Z"}}
+{"__v":0,"_id":{"$oid":"57041693620c1ec7c7fb03b9"},"completed":false,"name":"Vehicle from test file: 0.26630260028308994","note":"I was created from a click!","updated_at":{"$date":"2016-04-05T19:48:35.861Z"}}
+{"__v":0,"_id":{"$oid":"57041695620c1ec7c7fb03ba"},"completed":false,"name":"Vehicle from test file: 0.06176927966118262","note":"I was created from a click!","updated_at":{"$date":"2016-04-05T19:48:37.075Z"}}
